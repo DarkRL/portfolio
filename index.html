@@ -6,26 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.easeScroll.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/particles.css">
+    <script src="js/main.js"></script>
     <title>Sander | Portfolio</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div style="align-items:center;"
-            class="header_parallax_section d-flex flex-column justify-content-around h-100">
-            <img src="https://www.drogeham.com/assets/img/luchtfoto.jpg" class="parallax_background">
-            <div></div>
-            <div class="container">
-                <div class="text-center text-white text-capitalize">
-                    <h1 class="roboto custom_hidden_stay">Portfolio site sander</h1>
+    <div class="navigation">
+        <ul class="ml-5 text-uppercase">
+            <li>
+                <h3><a href="#home">Over mij</a></h3>
+            </li>
+            <li>
+                <h3><a href="#projecten">Mijn projecten</a></h3>
+            </li>
+            <li>
+                <h3><a href="#section3">Section 3</a></h3>
+            </li>
+            <!-- Add more menu items as needed -->
+        </ul>
+    </div>
+    <header>
+        <div class="container">
+            <div class="row justify-content-center p-3 clickable-hamburger-menu">
+                <div class="col-auto">
+                    <h6 class="text-white">MENU</h6>
+                </div>
+                <div class="col-auto">
+                    <div class="hamburger-menu">
+                        <div class="stripe"></div>
+                        <div class="stripe"></div>
+                        <div class="stripe"></div>
+                    </div>
                 </div>
             </div>
-            <div style="align-items:center" class="text-center text-capitalize d-flex flex-column custom_hidden_stay">
-                <a class="clicktohome d-none d-xl-block" href="#home" style="text-decoration:none;"><span
-                        class="text-white pb-3">Onze projecten</span></a>
-                <a class="clicktohome" href="#home">
-                    <svg style="scale:1.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+        </div>
+    </header>
+    <div id="loader"></div>
+    <div class="wrapper content">
+        <div style="align-items:center;" class="header_parallax_section d-flex flex-column justify-content-around">
+            <img class="parallax_background_3 bg_parallax_color" src="img/starnight.jpg" />
+            <img class="parallax_background_2 blur-image" style="width: 300px; height: auto; top:-30%; left:-60%"
+                src="img/moon.png" />
+            <img class="parallax_background blur-image" src="img/dark_mountain5.png" />
+            <div></div>
+            <div class="container">
+                <div class="text-center text-white text-uppercase font-exo">
+                    <h1 class="roboto">SANDER VAN DER GALIËN</h1>
+                </div>
+            </div>
+            <div style="align-items:center" class="text-center text-uppercase d-flex flex-column">
+                <a class="clicktohome" href="#home" style="text-decoration:none;">
+                    <span class="text-white mb-3 hover-underline-animation hover-underline-white">
+                        Wie ik ben
+                    </span>
+                </a>
+                <a class="clicktohome" href="#home" width="16" height="40">
+                    <svg style="scale:2" xmlns="http://www.w3.org/2000/svg" width="16" height="40" fill="white"
                         class="bi bi-arrow-down arrows" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
@@ -33,11 +73,64 @@
                 </a>
             </div>
         </div>
-        <div class="bg-light mt-5">
-            <div class="row justify-content-center">
-                <div class="col-10">
-                    <h4>LJNRjngrkjngjkrngjlndjgn</h4>
+        <div id="home" style="height:120vh; box-shadow: 0 -50px 100px rgba(26, 32, 44, 1);"
+            class="container-fluid bg_black text-white">
+            <div class="row d-flex justify-content-center">
+                <div class="col-4 m-5">
+                    <div class="mt-5 ml-5">
+                        <h1 class="font-exo large-heading-text hover-underline-animation hover-underline-white">Welkom</h1>
+                        <div class="font-roboto small-normal-text mt-4">
+                            <p>Ik ben <span class="hover-underline-animation hover-underline-white">Sander van der Galiën,</span> 
+                                een enthousiaste en gemotiveerde programmeur die zich voornamelijk
+                                bezig houd met het maken/ontwerpen van websites, games en diverse andere projecten.
+                            </p>
+                        </div>
+                    </div>
                 </div>
+                <div class="col-4 m-5">
+                    <div class="mt-5 mr-5">
+                        <img class="mw-100 person_image" src="img/afbeelding_sander.jpg" alt="Afbeelding_Sander" />
+                    </div>
+                </div>
+                <div class="d-flex flex-column align-items-center mt-2 text-uppercase">
+                    <a class="clicktohome" href="#projecten" style="text-decoration:none;">
+                        <span class="text-white mb-3 hover-underline-animation hover-underline-white">
+                            Mijn projecten
+                        </span>
+                    </a>
+                    <a class="clicktohome" href="#projecten" width="16" height="40">
+                        <svg style="scale:2" xmlns="http://www.w3.org/2000/svg" width="16" height="40" fill="white"
+                            class="bi bi-arrow-down arrows" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="align-items:center;" class="header_parallax_section d-flex flex-column justify-content-around">
+            <div class="parallax_background bg_parallax_color">
+                <div class="lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="text-center text-white font-exo">
+                    <h1 style="margin-top:50vh">PASSIE VOOR WEBDEVELOPMENT</h1>
+                </div>
+            </div>
+        </div>
+        <div id="projecten" style="top:100vh;" class="container-fluid bg_darkgreen text-white vh-100">
+            <div class="text-center font-exo pt-5">
+                <h1>PROJECTEN</h1>
             </div>
         </div>
     </div>

@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+html {
+
+    scroll-behavior: smooth !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 10px;
+    position: relative;
+}
+
+/* Adjust the scroll speed as needed */
+.wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+.wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.parallax_header {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.parallax_section {
+    background-color: white;
+}
+
+.parallax_background {
+    margin-top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.parallax_background {
+    transform: translateZ(-10px) scale(2.1);
+}
+
+.parallax_background_2 {
+    margin-top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.parallax_background_2 {
+    transform: translateZ(-30px) scale(4.1);
+}
+
+.parallax_background_3 {
+    margin-top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -3;
+}
+
+.parallax_background_3 {
+    transform: translateZ(-50px) scale(6.1);
+}
+
+.header_parallax_section {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.font-exo {
+    font-family: 'exo', sans-serif;
+}
+
+.font-roboto {
+    font-family: 'roboto', sans-serif;
+}
+
+.large-heading-text {
+    font-size: 600%;
+    letter-spacing: 0.05em;
+}
+
+.small-normal-text {
+    font-size: 150%;
+    letter-spacing: 0.05em;
+}
+
+.arrows {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.arrows:hover {
+    transform: translateY(10px);
+}
+
+.arrows::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid black;
+    position: relative;
+    top: -2px;
+    left: -12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.arrows:hover::before {
+    transform: translateX(10px);
+}
+
+.bg_black {
+    background: #1A202C;
+}
+
+.bg_darkgreen {
+    background: #333333;
+}
+
+.bg_parallax_color {
+    background: rgb(6, 2, 40);
+}
+
+
+.parallax_fixed2 {
+    /* The image used */
+    background-image: url("https://picsum.photos/2000/2000");
+
+    /* Set a specific height */
+    min-height: 110vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* Set your desired background color */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    /* Set your desired spinner color */
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#content {
+    display: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 50px;
+    z-index: 9999;
+}
+
+.hamburger-menu {
+    position: relative;
+    /* Add this line */
+    z-index: 9999;
+    /* Increase z-index value */
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stripe {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.hamburger-menu:hover .stripe:nth-child(2) {
+    transform: scaleX(0.5);
+}
+
+.hamburger-menu.clicked .stripe:nth-child(1),
+.hamburger-menu.clicked .stripe:nth-child(3) {
+    transform: scaleX(0);
+}
+
+.navigation {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: black;
+    transform: translateY(-100%);
+    transition: transform 2s ease-in-out;
+    z-index: 9998;
+}
+
+.navigation.open {
+    transform: translateY(100%);
+}
+
+
+.navigation ul li a::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('img/arrow-right.svg');
+    background-size: 100% auto;
+    margin-left: 25px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-10px);
+}
+
+.navigation ul li a:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 21%;
+    margin-left: 18%;
+}
+
+.navigation ul li {
+    margin-bottom: 20px;
+}
+
+.navigation ul li a {
+    color: rgb(199, 199, 199);
+    text-decoration: none;
+    padding: 10px;
+    transition: color 1s ease;
+    position: relative;
+}
+
+.navigation ul li a:hover {
+    color: #fff;
+}
+
+.clickable-hamburger-menu {
+    cursor: pointer;
+}
+
+.person_image {
+    border-radius: 50%;
+}
+
+.blur-image {
+    filter: blur(1px); /* Adjust the blur amount as desired */
+}
+
+/* Custom scroll fade animation(Repeats if off screen and back on screen) */
+.custom_hidden_repeat {
+    opacity: 0;
+    transition: all 2s;
+}
+
+/* Custom scroll fade animation(Does not repeat when off screen and back on screen) */
+.custom_hidden_stay {
+    opacity: 0;
+    transition: all 2s;
+}
+
+.custom_hidden_stay_fast {
+    opacity: 0;
+    transition: all 1s;
+}
+
+/* Custom scroll fade up animation */
+.custom_hidden_stay_up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 2s;
+}
+
+/* Custom scroll fade from small to normal animation */
+.custom_hidden_stay_size {
+    opacity: 0;
+    transform: translateY(50px) scale(0.5);
+    transition: all 1s;
+}
+
+/*Animations*/
+.custom_show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-grey::after {
+    background-color: #939495;
+}
+
+.hover-underline-white::after {
+    background-color: #f8f9fa;
+}
+
+.hover-underline-dark::after {
+    background-color: #212529;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1.01);
+    transform-origin: bottom left;
+}
+/* -- */
