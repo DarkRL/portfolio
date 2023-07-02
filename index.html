@@ -16,7 +16,19 @@
 
 <body>
     <div class="navigation">
-        <ul class="ml-5 text-uppercase">
+        <div class="d-md-none mt-5 h-25"></div>
+        <ul class="d-md-none w-100 m-0 p-0 text-uppercase">
+            <li>
+                <h6><a href="#home">Over mij</a></h6>
+            </li>
+            <li>
+                <h6><a href="#projecten">Mijn projecten</a></h6>
+            </li>
+            <li>
+                <h6><a href="#section3">Section 3</a></h6>
+            </li>
+        </ul>
+        <ul class="d-none d-md-block ml-5 text-uppercase">
             <li>
                 <h3><a href="#home">Over mij</a></h3>
             </li>
@@ -26,7 +38,6 @@
             <li>
                 <h3><a href="#section3">Section 3</a></h3>
             </li>
-            <!-- Add more menu items as needed -->
         </ul>
     </div>
     <header>
@@ -60,51 +71,68 @@
             </div>
             <div style="align-items:center" class="text-center text-uppercase d-flex flex-column">
                 <a class="clicktohome" href="#home" style="text-decoration:none;">
-                    <span class="text-white mb-3 hover-underline-animation hover-underline-white">
-                        Wie ik ben
-                    </span>
+                    <span class="text-white pb-3">Wie ik ben</span>
                 </a>
-                <a class="clicktohome" href="#home" width="16" height="40">
-                    <svg style="scale:2" xmlns="http://www.w3.org/2000/svg" width="16" height="40" fill="white"
-                        class="bi bi-arrow-down arrows" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
-                    </svg>
-                </a>
+                <a class="clicktohome" href="#home"><img class="arrows" src="img/arrow-down.svg"" alt=" Arrow-down"
+                        height="35" width="35" /></a>
             </div>
         </div>
         <div id="home" style="height:120vh; box-shadow: 0 -50px 100px rgba(26, 32, 44, 1);"
             class="container-fluid bg_black text-white">
-            <div class="row d-flex justify-content-center">
-                <div class="col-4 m-5">
-                    <div class="mt-5 ml-5">
-                        <h1 class="font-exo large-heading-text hover-underline-animation hover-underline-white">Welkom</h1>
-                        <div class="font-roboto small-normal-text mt-4">
-                            <p>Ik ben <span class="hover-underline-animation hover-underline-white">Sander van der Galiën,</span> 
+            <div class="row d-flex justify-content-center h-100">
+                <div class="col-md-6 mt-5">
+                    <div class="d-none d-lg-block">
+                        <div style="margin-left: 25%">
+                            <div class="mt-5 ml-5">
+                                <h1 class="font-exo large-heading-text hover-underline-animation hover-underline-white">
+                                    Welkom
+                                </h1>
+                                <div class="font-roboto small-normal-text mt-4">
+                                    <p>Ik ben <span class="hover-underline-animation hover-underline-white">Sander van
+                                            der
+                                            Galiën,</span>
+                                        een enthousiaste en gemotiveerde programmeur die zich voornamelijk
+                                        bezig houd met het maken/ontwerpen van websites, games en diverse andere
+                                        projecten.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5 ml-5 d-lg-none">
+                        <h3 class="font-exo hover-underline-animation hover-underline-white">Welkom
+                        </h3>
+                        <div class="font-roboto mt-4">
+                            <p>Ik ben <span class="hover-underline-animation hover-underline-white">Sander van der
+                                    Galiën,</span>
                                 een enthousiaste en gemotiveerde programmeur die zich voornamelijk
                                 bezig houd met het maken/ontwerpen van websites, games en diverse andere projecten.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-4 m-5">
-                    <div class="mt-5 mr-5">
-                        <img class="mw-100 person_image" src="img/afbeelding_sander.jpg" alt="Afbeelding_Sander" />
+                <div class="col-md-6 justify-content-center text-center mt-5">
+                    <div class="d-none d-lg-block">
+                        <div style="margin-right: 25%">
+                            <div class="mt-5 mr-5">
+                                <img class="mw-100 w-50 person_image" src="img/afbeelding_sander.jpg"
+                                    alt="Afbeelding_Sander" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-5 d-lg-none">
+                        <div class="mt-5 mr-5">
+                            <img class="mw-100 w-50 person_image" src="img/afbeelding_sander.jpg"
+                                alt="Afbeelding_Sander" />
+                        </div>
                     </div>
                 </div>
-                <div class="d-flex flex-column align-items-center mt-2 text-uppercase">
+                <div style="align-items:center" class="col-md-12 text-center text-uppercase d-flex flex-column mt-2">
                     <a class="clicktohome" href="#projecten" style="text-decoration:none;">
-                        <span class="text-white mb-3 hover-underline-animation hover-underline-white">
-                            Mijn projecten
-                        </span>
+                        <span class="text-white pb-3">Mijn projecten</span>
                     </a>
-                    <a class="clicktohome" href="#projecten" width="16" height="40">
-                        <svg style="scale:2" xmlns="http://www.w3.org/2000/svg" width="16" height="40" fill="white"
-                            class="bi bi-arrow-down arrows" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
-                        </svg>
-                    </a>
+                    <a class="clicktohome" href="#projecten"><img class="arrows" src="img/arrow-down.svg"" alt=" Arrow-down"
+                            height="35" width="35" /></a>
                 </div>
             </div>
         </div>
