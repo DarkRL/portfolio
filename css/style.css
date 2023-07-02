@@ -256,25 +256,6 @@ header {
     transform: translateY(100%);
 }
 
-
-.navigation ul li a::after {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url('img/arrow-right.svg');
-    background-size: 100% auto;
-    margin-left: 25px;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateX(-10px);
-}
-
-.navigation ul li a:hover::after {
-    opacity: 1;
-    transform: translateX(0);
-}
-
 .navigation ul {
     list-style: none;
     display: flex;
@@ -288,7 +269,7 @@ header {
     margin-bottom: 20px;
 }
 
-.navigation ul li a {
+.navitemlink {
     color: rgb(199, 199, 199);
     text-decoration: none;
     padding: 10px;
@@ -296,7 +277,7 @@ header {
     position: relative;
 }
 
-.navigation ul li a:hover {
+.navitemlink:hover {
     color: #fff;
 }
 
@@ -309,7 +290,8 @@ header {
 }
 
 .blur-image {
-    filter: blur(1px); /* Adjust the blur amount as desired */
+    filter: blur(1px);
+    /* Adjust the blur amount as desired */
 }
 
 /* Custom scroll fade animation(Repeats if off screen and back on screen) */
@@ -382,4 +364,84 @@ header {
     transform: scaleX(1.01);
     transform-origin: bottom left;
 }
+
 /* -- */
+
+.card {
+    background-color: #33393e;
+}
+
+/* relevant styles */
+.img__wrap {
+    position: relative;
+}
+
+.img__description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(43, 44, 44, 0.72);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hover-arrow-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.hover-arrow-container .hoverarrowicon {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-arrow-container:hover .hoverarrowicon {
+    transform: translateX(10px);
+    /* Adjust the amount of movement as needed */
+}
+
+.hoverarrowicon {
+    display: inline-block;
+    margin-left: 5px;
+    /* Adjust the spacing between the text and the arrow as needed */
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease;
+  }
+  
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 2s ease;
+  }
+  
+  .fade-in-slowly {
+    opacity: 0;
+    transition: opacity 4s ease;
+  }
+
+  .fade-in-active {
+    opacity: 1;
+  }
+  
+  .fade-up-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .fade-in-slowly-active {
+    opacity: 1;
+  }

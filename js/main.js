@@ -34,30 +34,28 @@ $(document).ready(function () {
     });
 });
 
-/* Custom scroll fade animation */
-function scrollFunction(classname, repeat) {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (repeat == true) {
-                if (entry.isIntersecting) {
-                    $(entry.target).addClass('custom_show');
-                } else {
-                    $(entry.target).removeClass('custom_show');
-                }
-            } else {
-                if (entry.isIntersecting) {
-                    $(entry.target).addClass('custom_show');
-                }
-            }
-        })
-    }
-    )
 
-    $(classname).each((_, el) => observer.observe(el));
-}
-
-scrollFunction('.custom_hidden_repeat', true)
-scrollFunction('.custom_hidden_stay', false)
-scrollFunction('.custom_hidden_stay_fast', false)
-scrollFunction('.custom_hidden_stay_up', false)
-scrollFunction('.custom_hidden_stay_size', false)
+$(document).ready(function() {
+    $(".wrapper").scroll(function() {
+      $('.fade-in, .fade-up, .fade-in-slowly').each(function() {
+        var scrollTop = $(window).scrollTop();
+        var elementOffset = $(this).offset().top;
+        var distance = (elementOffset - scrollTop);
+  
+        // Fade in the element when it enters the viewport
+        if (distance < $(window).height() - 100) {
+          $(this).addClass('fade-in-active');
+        }
+      });
+    });
+  
+    // Fade in the elements on page load if they are already visible
+    $('.fade-in, .fade-up, .fade-in-slowly').each(function() {
+      var scrollTop = $(window).scrollTop();
+      var elementOffset = $(this).offset().top;
+      var distance = (elementOffset - scrollTop);
+      if (distance < $(window).height() - 100) {
+        $(this).addClass('fade-in-active');
+      }
+    });
+  });

@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery.easeScroll.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/particles.css">
     <script src="js/main.js"></script>
@@ -17,26 +16,64 @@
 <body>
     <div class="navigation">
         <div class="d-md-none mt-5 h-25"></div>
+        <div class="m-5 container d-none d-md-block">
+            <div style="width:33%" class="row">
+                <div class="col-sm-4">
+                    <a href="https://github.com/DarkRL" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-github"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="https://www.linkedin.com/in/sander-van-der-gali%C3%ABn-81b699255/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white"
+                            class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="m-2 mb-5 container d-md-none">
+            <div  class="row w-50">
+                <div class="col">
+                    <a href="https://github.com/DarkRL" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-github"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.linkedin.com/in/sander-van-der-gali%C3%ABn-81b699255/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white"
+                            class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
         <ul class="d-md-none w-100 m-0 p-0 text-uppercase">
             <li>
-                <h6><a href="#home">Over mij</a></h6>
+                <h6><a class="navitemlink" href="#home">Over mij</a></h6>
             </li>
             <li>
-                <h6><a href="#projecten">Mijn projecten</a></h6>
-            </li>
-            <li>
-                <h6><a href="#section3">Section 3</a></h6>
+                <h6><a class="navitemlink" href="#projecten">Mijn projecten</a></h6>
             </li>
         </ul>
         <ul class="d-none d-md-block ml-5 text-uppercase">
             <li>
-                <h3><a href="#home">Over mij</a></h3>
+                <h3><a class="navitemlink" href="#home">Over mij</a></h3>
             </li>
             <li>
-                <h3><a href="#projecten">Mijn projecten</a></h3>
-            </li>
-            <li>
-                <h3><a href="#section3">Section 3</a></h3>
+                <h3><a class="navitemlink" href="#projecten">Mijn projecten</a></h3>
             </li>
         </ul>
     </div>
@@ -44,12 +81,12 @@
         <div class="container">
             <div class="row justify-content-center p-3 clickable-hamburger-menu">
                 <div class="col-auto">
-                    <h6 class="text-white">MENU</h6>
+                    <h6 class="text-white fade-in">MENU</h6>
                 </div>
                 <div class="col-auto">
                     <div class="hamburger-menu">
                         <div class="stripe"></div>
-                        <div class="stripe"></div>
+                        <div class="stripe fade-in"></div>
                         <div class="stripe"></div>
                     </div>
                 </div>
@@ -66,11 +103,12 @@
             <div></div>
             <div class="container">
                 <div class="text-center text-white text-uppercase font-exo">
-                    <h1 class="roboto">SANDER VAN DER GALIËN</h1>
+                    <h1 class="roboto fade-in">SANDER VAN DER GALIËN</h1>
                 </div>
             </div>
-            <div style="align-items:center" class="text-center text-uppercase d-flex flex-column">
-                <a class="clicktohome" href="#home" style="text-decoration:none;">
+            <div style="align-items:center" class="text-center text-uppercase d-flex flex-column fade-in">
+                <a class="clicktohome hover-underline-animation hover-underline-white" href="#home"
+                    style="text-decoration:none;">
                     <span class="text-white pb-3">Wie ik ben</span>
                 </a>
                 <a class="clicktohome" href="#home"><img class="arrows" src="img/arrow-down.svg"" alt=" Arrow-down"
@@ -84,11 +122,14 @@
                     <div class="d-none d-lg-block">
                         <div style="margin-left: 25%">
                             <div class="mt-5 ml-5">
-                                <h1 class="font-exo large-heading-text hover-underline-animation hover-underline-white">
+                                <h1
+                                    class="font-exo large-heading-text hover-underline-animation hover-underline-white fade-in">
                                     Welkom
                                 </h1>
                                 <div class="font-roboto small-normal-text mt-4">
-                                    <p>Ik ben <span class="hover-underline-animation hover-underline-white">Sander van
+                                    <p>Ik ben <span
+                                            class="hover-underline-animation hover-underline-white fade-in-slowly">Sander
+                                            van
                                             der
                                             Galiën,</span>
                                         een enthousiaste en gemotiveerde programmeur die zich voornamelijk
@@ -103,7 +144,9 @@
                         <h3 class="font-exo hover-underline-animation hover-underline-white">Welkom
                         </h3>
                         <div class="font-roboto mt-4">
-                            <p>Ik ben <span class="hover-underline-animation hover-underline-white">Sander van der
+                            <p>Ik ben <span
+                                    class="hover-underline-animation hover-underline-white fade-in-slowly">Sander van
+                                    der
                                     Galiën,</span>
                                 een enthousiaste en gemotiveerde programmeur die zich voornamelijk
                                 bezig houd met het maken/ontwerpen van websites, games en diverse andere projecten.
@@ -128,11 +171,12 @@
                     </div>
                 </div>
                 <div style="align-items:center" class="col-md-12 text-center text-uppercase d-flex flex-column mt-2">
-                    <a class="clicktohome" href="#projecten" style="text-decoration:none;">
-                        <span class="text-white pb-3">Mijn projecten</span>
+                    <a class="clicktohome hover-underline-animation hover-underline-white" href="#projecten"
+                        style="text-decoration:none;">
+                        <span class="text-white pb-3 fade-in">Mijn projecten</span>
                     </a>
-                    <a class="clicktohome" href="#projecten"><img class="arrows" src="img/arrow-down.svg"" alt=" Arrow-down"
-                            height="35" width="35" /></a>
+                    <a class="clicktohome fade-in-slowly" href="#projecten"><img class="arrows"
+                            src="img/arrow-down.svg"" alt=" Arrow-down" height="35" width="35" /></a>
                 </div>
             </div>
         </div>
@@ -151,14 +195,70 @@
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <div class="text-center text-white font-exo">
+                <div class="text-center text-white font-exo fade-in">
                     <h1 style="margin-top:50vh">PASSIE VOOR WEBDEVELOPMENT</h1>
                 </div>
             </div>
         </div>
-        <div id="projecten" style="top:100vh;" class="container-fluid bg_darkgreen text-white vh-100">
+        <div id="projecten" style="top:100vh; min-height:120vh" class="container-fluid bg-dark text-white">
             <div class="text-center font-exo pt-5">
                 <h1>PROJECTEN</h1>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-4 mb-4 mb-lg-0">
+                    <div class="card w-100 mb-3 fade-up">
+                        <div class="img__wrap m-3">
+                            <img class="img__img img-fluid rounded" src="img/image_portfolio_website.jpg" />
+                            <p
+                                class="img__description font-exo h-100 rounded text-uppercase text-center d-flex align-items-center justify-content-center">
+                                Van design tot realisatie</p>
+                        </div>
+                        <div class="card-body text-light">
+                            <h4 class="card-title hover-underline-animation hover-underline-white font-exo">Portfolio
+                                website
+                            </h4>
+                            <p class="border-bottom border-secondary mb-0 pb-1">HTML, CSS,
+                                Bootstrap, JS & Jquery</p>
+                            <p class="card-text mt-2">Ik web deze website gemaakt door middel van CSS in combinatie met
+                                het CSS framework <a href="https://getbootstrap.com/" target="_blank"
+                                    class=" text-light text-decoration-none hover-underline-animation hover-underline-white">Bootstrap</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-lg-0">
+                    <div class="card w-100 mb-3 fade-up">
+                        <div class="img__wrap m-3">
+                            <img class="img__img img-fluid rounded" src="img/image_drogeham_website.jpg" />
+                            <p
+                                class="img__description font-exo h-100 rounded text-uppercase text-center d-flex align-items-center justify-content-center">
+                                Van design tot realisatie</p>
+                        </div>
+                        <div class="card-body text-light">
+                            <h4 class="card-title hover-underline-animation hover-underline-white font-exo">Plaatselijk
+                                Belang
+                                Drogeham</h4>
+                            <p class="border-bottom border-secondary mb-0 pb-1">Webportal, HTML,
+                                CSS, Bootstrap, JS, Jquery, AJAX, MYSQL, PHP & Laravel</p>
+                            <p class="card-text mt-2">"Plaatselijk Belang Drogeham" is een website waar informatie staat
+                                voor alle bewoners van Drogeham. Deze website heeft een administratorpaneel waarmee de
+                                beheerder alle pagina's kan aanpassen.</p>
+                            <div class="hover-arrow-container">
+                                <a href="https://drogeham.com/" target="_blank" class="text-decoration-none text-light">
+                                    <span class="hover-underline-animation hover-underline-white hovertextarrow">Ga naar
+                                        site</span>
+                                    <span class="hoverarrowicon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
